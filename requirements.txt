@@ -5,3 +5,4 @@ jinja2
 python-multipart
 python-jose[cryptography]
 passlib[bcrypt]
+python-dotenv
