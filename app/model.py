@@ -12,6 +12,7 @@ class User(Base):
     password = Column(String)
 
 
+
 class Todo(Base):
     __tablename__ = "todos"
 

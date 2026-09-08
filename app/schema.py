@@ -7,6 +7,10 @@ class UserCreate(BaseModel):
     password: str
 
 
+class UserLogin(BaseModel):
+    username: str
+    password: str
+
 class TodoCreate(BaseModel):
     work: str
     completed: bool = False
