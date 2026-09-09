@@ -15,9 +15,7 @@ auth_router = APIRouter()
 templates = Jinja2Templates(directory="app/templates")
 
 
-# =========================
-# REGISTER API
-# =========================
+
 
 @auth_router.post("/register")
 def register(
@@ -49,9 +47,7 @@ def register(
     }
 
 
-# =========================
-# LOGIN API
-# =========================
+
 
 @auth_router.post("/login")
 def login(
@@ -87,9 +83,7 @@ def login(
     }
 
 
-# =========================
-# REGISTER PAGE
-# =========================
+
 
 @auth_router.get(
     "/register",
@@ -103,9 +97,7 @@ def register_page(request: Request):
     )
 
 
-# =========================
-# LOGIN PAGE
-# =========================
+
 
 @auth_router.get(
     "/login",

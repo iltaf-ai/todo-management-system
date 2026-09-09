@@ -11,9 +11,6 @@ from app.schema import TodoCreate
 todo_router = APIRouter()
 
 
-# =========================
-# CREATE TODO
-# =========================
 
 @todo_router.post("/todo")
 def todo_create(
@@ -37,9 +34,7 @@ def todo_create(
     }
 
 
-# =========================
-# READ TODO
-# =========================
+
 
 @todo_router.get("/todo")
 def see_todo(
@@ -53,9 +48,7 @@ def see_todo(
     return todos
 
 
-# =========================
-# UPDATE TODO
-# =========================
+
 
 @todo_router.put("/todo/{todo_id}")
 def update_todo(
@@ -92,9 +85,7 @@ def update_todo(
     }
 
 
-# =========================
-# DELETE TODO
-# =========================
+
 
 @todo_router.delete("/todo/{todo_id}")
 def deleted_todo(
