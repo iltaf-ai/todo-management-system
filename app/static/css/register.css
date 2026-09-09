@@ -61,3 +61,8 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+}

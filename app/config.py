@@ -6,7 +6,7 @@ load_dotenv()
 class settings():
     SECRET_KEY = os.getenv("SECRET_KEY")
     ALGORITHM = os.getenv("ALGORITHM")
-    ACCESS_EXPIRE_TOKEN_TIME = os.getenv("ACCESS_EXPIRE_TOKEN_TIME")
+    ACCESS_EXPIRE_TOKEN_TIME = int(os.getenv("ACCESS_EXPIRE_TOKEN_TIME"))
     SQL_URL = os.getenv("SQL_URL")
 
 settings = settings()

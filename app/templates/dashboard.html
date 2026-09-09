@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="topbar">
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <span>TodoFlow</span>
+            </div>
+
+            <button id="logoutBtn">Logout</button>
+        </header>
+
+        <main>
+
+            <section class="welcome">
+                <div>
+                    <span class="badge">PERSONAL DASHBOARD</span>
+                    <h1>Welcome back 👋</h1>
+                    <p>Stay organized and get your tasks done.</p>
+                </div>
+
+                <button id="todoBtn" class="primary-btn">
+                    + Manage My Todos
+                </button>
+            </section>
+
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div>
+                        <span>Total Tasks</span>
+                        <h2 id="totalTasks">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">✓</div>
+                    <div>
+                        <span>Completed</span>
+                        <h2 id="completedTasks">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div>
+                        <span>Pending</span>
+                        <h2 id="pendingTasks">0</h2>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="content-grid">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <span class="small-title">QUICK ACTION</span>
+                            <h2>Manage your tasks</h2>
+                        </div>
+                    </div>
+
+                    <p class="card-text">
+                        Create new tasks, update existing tasks,
+                        mark them as completed or remove them.
+                    </p>
+
+                    <button id="todoBtn2" class="secondary-btn">
+                        Open Todo Manager →
+                    </button>
+                </div>
+
+                <div class="card activity-card">
+                    <span class="small-title">TODAY</span>
+                    <h2>Stay productive</h2>
+
+                    <div class="productivity">
+                        <div class="check-circle">✓</div>
+                        <div>
+                            <strong>Keep moving forward</strong>
+                            <p>Complete your tasks one by one.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <p id="message"></p>
+
+        </main>
+
+        <footer>
+            <p>TodoFlow • Manage your work. Stay productive.</p>
+        </footer>
+
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+
+</body>
+
+</html>

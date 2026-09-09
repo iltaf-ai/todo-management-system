@@ -88,12 +88,18 @@ def get_username_from_token(
             detail="Invalid or expired token"
         )
 
-#current user
-def get_current_user(username : str = Depends(get_current_user) , db:Session = Depends(get_db)):
-    user = db.query(User).filter(User.username == username).first()
+def get_current_user(
+    username: str = Depends(get_username_from_token),
+    db: Session = Depends(get_db)
+):
+    user = db.query(User).filter(
+        User.username == username
+    ).first()
+
     if not user:
-         raise HTTPException(
+        raise HTTPException(
             status_code=401,
             detail="username not found"
-           )
-    return username 
+        )
+
+    return user

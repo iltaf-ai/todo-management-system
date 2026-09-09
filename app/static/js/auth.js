@@ -1,8 +1,9 @@
-// Register
-
 document.getElementById("registerForm")?.addEventListener("submit", async function(e) {
-
     e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
     const response = await fetch("/register", {
         method: "POST",
@@ -10,9 +11,9 @@ document.getElementById("registerForm")?.addEventListener("submit", async functi
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            email: document.getElementById("email").value,
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value
+            email: email,
+            username: username,
+            password: password
         })
     });
 
@@ -25,12 +26,11 @@ document.getElementById("registerForm")?.addEventListener("submit", async functi
     }
 });
 
-
-// Login
-
 document.getElementById("loginForm")?.addEventListener("submit", async function(e) {
-
     e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
     const response = await fetch("/login", {
         method: "POST",
@@ -38,20 +38,17 @@ document.getElementById("loginForm")?.addEventListener("submit", async function(
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value
+            username: username,
+            password: password
         })
     });
 
     const data = await response.json();
 
     if (response.ok && data.token) {
-
         localStorage.setItem("token", data.token);
-
         window.location.href = "/dashboard";
-    } 
-    else {
+    } else {
         document.getElementById("message").innerText = data.message;
     }
 });

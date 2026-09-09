@@ -1,19 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>Register</title>
+
+    <link rel="stylesheet" href="/static/css/register.css">
 </head>
 
 <body>
 
-    <div class="auth-container">
+    <div class="register-container">
 
-        <h1>Login</h1>
+        <h1>Create Account</h1>
 
-        <form id="loginForm">
+        <form id="registerForm">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
 
             <input
                 type="text"
@@ -29,13 +40,15 @@
                 required
             >
 
-            <button type="submit">Login</button>
+            <button type="submit">
+                Register
+            </button>
 
         </form>
 
         <p>
-            Don't have an account?
-            <a href="/register">Register</a>
+            Already have an account?
+            <a href="/login">Login</a>
         </p>
 
         <p id="message"></p>
@@ -45,4 +58,6 @@
     <script src="/static/js/auth.js"></script>
 
 </body>
+
 </html>
+
