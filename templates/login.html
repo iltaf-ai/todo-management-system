@@ -3,24 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/static/css/register.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
 
     <div class="auth-container">
 
-        <h1>Create Account</h1>
+        <h1>Login</h1>
 
-        <form id="registerForm">
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                required
-            >
+        <form id="loginForm">
 
             <input
                 type="text"
@@ -36,13 +29,13 @@
                 required
             >
 
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
 
         </form>
 
         <p>
-            Already have an account?
-            <a href="/login">Login</a>
+            Don't have an account?
+            <a href="/register">Register</a>
         </p>
 
         <p id="message"></p>

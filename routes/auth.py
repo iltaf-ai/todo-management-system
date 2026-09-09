@@ -50,7 +50,8 @@ def login(
 
     user_existing = db.query(User).filter(User.username == user.username).first()
     if not user_existing:
-        return {
+        return {#
+        
             "message": "User not found"
         }
     
